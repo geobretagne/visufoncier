@@ -1,2 +1,2 @@
-# visufoncier
-visualisation de la consommation et de l'artificalisation du foncier
+# Visufoncier
+Visualisation de la consommation et de l'artificalisation du foncier
