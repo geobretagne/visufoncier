@@ -131,3 +131,51 @@ UPDATE visufoncier.mos_foncier_agrege_temp
 SET flux_renaturation = CASE WHEN enaf_conso_2021 = 'enaf' AND enaf_conso_2011 = 'conso' THEN 1 ELSE 0 END;
 
 -- ==========================================================
+--Nature du flux 2011 2021 en utilisant la table de nomenclature_mos visufoncier.nomenclature_mos
+
+-- Ajouter la nouvelle colonne "nature_2011" à la table "mos_foncier_agrege_temp"
+ALTER TABLE visufoncier.mos_foncier_agrege_temp
+ADD COLUMN nature_2011 VARCHAR; 
+
+-- Mettre à jour la colonne "nature_2011" en utilisant les valeurs correspondantes de la table "nomenclature_mos"
+UPDATE visufoncier.mos_foncier_agrege_temp
+SET
+    nature_2011 = nomenclature_mos.libelle_regroupement
+FROM visufoncier.nomenclature_mos
+WHERE visufoncier.mos_foncier_agrege_temp.code4_2011 = visufoncier.nomenclature_mos.code_n4;
+
+-- Ajouter la nouvelle colonne "nature_2021" à la table "mos_foncier_agrege_temp"
+ALTER TABLE visufoncier.mos_foncier_agrege_temp
+ADD COLUMN nature_2021 VARCHAR; 
+
+-- Mettre à jour la colonne "nature_2021" en utilisant les valeurs correspondantes de la table "nomenclature_mos"
+UPDATE visufoncier.mos_foncier_agrege_temp
+SET
+    nature_2021 = nomenclature_mos.libelle_regroupement
+FROM visufoncier.nomenclature_mos
+WHERE visufoncier.mos_foncier_agrege_temp.code4_2021 = visufoncier.nomenclature_mos.code_n4;
+
+-------------------Nature détaillée 2011 2021 du flux en utilsant la table de nomenclature_mos visufoncier.nomenclature_mos-------------------------------------------
+
+
+-- Ajouter la nouvelle colonne "nature_2011" à la table "mos_foncier_agrege_temp"
+ALTER TABLE visufoncier.mos_foncier_agrege_temp
+ADD COLUMN nature_det_2011 VARCHAR; 
+
+-- Mettre à jour la colonne "nature_2011" en utilisant les valeurs correspondantes de la table "nomenclature_mos"
+UPDATE visufoncier.mos_foncier_agrege_temp
+SET
+    nature_det_2011 = nomenclature_mos.libelle_n4
+FROM visufoncier.nomenclature_mos
+WHERE visufoncier.mos_foncier_agrege_temp.code4_2011 = visufoncier.nomenclature_mos.code_n4;
+
+-- Ajouter la nouvelle colonne "nature_2021" à la table "mos_foncier_agrege_temp"
+ALTER TABLE visufoncier.mos_foncier_agrege_temp
+ADD COLUMN nature_det_2021 VARCHAR; 
+
+-- Mettre à jour la colonne "nature_2021" en utilisant les valeurs correspondantes de la table "nomenclature_mos"
+UPDATE visufoncier.mos_foncier_agrege_temp
+SET
+    nature_det_2021 = nomenclature_mos.libelle_n4
+FROM visufoncier.nomenclature_mos
+WHERE visufoncier.mos_foncier_agrege_temp.code4_2021 = visufoncier.nomenclature_mos.code_n4;
