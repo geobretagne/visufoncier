@@ -64,7 +64,7 @@ CREATE INDEX idx_mos_foncier_agrege_temp_geom ON visufoncier.mos_foncier_agrege_
 -- ==========================================================
 
 -- ==========================================================
---Création de l'indicateur de consommation et d'artificialisation 2011 "conso vs enaf" et "artificialisees vs non artificialisees vs artificialisees en partie"
+--Création de l'indicateur de consommation et d'artificialisation 2011 - 2021 "conso vs enaf" et "artificialisees vs non artificialisees vs artificialisees en partie"
 ALTER TABLE visufoncier.mos_foncier_agrege_temp
 ADD COLUMN enaf_conso_2011 text,
 ADD COLUMN artificialisees_2011 text;
@@ -75,5 +75,16 @@ SET
     artificialisees_2011 = nomenclature_mos.artificialisees
 FROM visufoncier.nomenclature_mos
 WHERE visufoncier.mos_foncier_agrege_temp.code4_2011 = visufoncier.nomenclature_mos.code_n4;
--- ==========================================================
 
+ALTER TABLE visufoncier.mos_foncier_agrege_temp
+ADD COLUMN enaf_conso_2021 text,
+ADD COLUMN artificialisees_2021 text;
+
+UPDATE visufoncier.mos_foncier_agrege_temp
+SET
+    enaf_conso_2021 = nomenclature_mos.enaf_conso,
+    artificialisees_2021 = nomenclature_mos.artificialisees
+FROM visufoncier.nomenclature_mos
+WHERE visufoncier.mos_foncier_agrege_temp.code4_2021 = visufoncier.nomenclature_mos.code_n4;
+
+-- ==========================================================
