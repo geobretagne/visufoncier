@@ -122,6 +122,7 @@ Par exemple, si la variable "nom_departement" est oubliée dans une vue matéria
 
 ## 7. Personnalisation
 
+Voir les tutoriels de personnalisation sur la page : https://margot-leborgne.gitbook.io/formation-superset-avancee
 ### 7.1 Personnalisation avec le CSS
 L'apparence du tableau de bord (par exemple, ajuster la taille des polices ou les marges des éléments), est personnalisé avec du code CSS.
 <p align="center">
