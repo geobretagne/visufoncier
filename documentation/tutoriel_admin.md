@@ -142,4 +142,4 @@ Pour personnaliser des aspects visuels comme les couleurs des graphiques en fonc
 *Le code metadonnées JSON est commenté et disponbile dans la section github - metajson à venir*
 
 ---
-
+Ajouter la partie embedded, mettre des liens vers la doc officielle, ajouter une partie sur l'export-import 
