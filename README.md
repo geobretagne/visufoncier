@@ -30,7 +30,7 @@ Pour en savoir plus sur les fonctionnalités et l'utilisation de l'outil, consul
 [Tutoriel utilisateur](https://github.com/geobretagne/visufoncier/blob/main/documentation/tutoriel.md)
 
 ### Problèmes et suggestions
-Si vous rencontrez des problèmes ou si vous avez des suggestions pour améliorer l'outil, n'hésitez pas à créer un ticket dans l'onglet **Issues** : [Ticket](https://github.com/geobretagne/visufoncier/issues)
+Si vous rencontrez des problèmes ou si vous avez des suggestions pour améliorer l'outil, n'hésitez pas à créer un ticket dans l'onglet `Issues`  : [Ticket](https://github.com/geobretagne/visufoncier/issues)
 
 ### Licence
 Ce projet est sous licence MIT. Consultez le fichier `LICENSE` pour plus d'informations.
