@@ -8,18 +8,13 @@ Pour accéder à votre instance Superset et commencer à modifier le tableau de 
 ## 2. Gestion du tableau de bord
 
 ### 2.1 Modification de la mise en page
-Une fois connecté, vous pouvez modifier la disposition des éléments dans votre tableau de bord :
-- Allez dans "Edit Dashboard".
-- Vous pouvez déplacer, redimensionner et réorganiser les widgets, graphiques et tableaux pour ajuster la présentation selon vos besoins.
+Une fois connecté, vous pouvez modifier la disposition des éléments dans votre tableau de bord. Pour plus d'information :
 
-> ⚠️ **Attention** : Il est possible de changer le titre d'un graphique à partir de la mise en page, mais cela ne se répercute pas dans le réel titre du graphique. Il est donc préférable d'effectuer le changement dans le menu "Charts".
+[Documentation Superset](https://superset.apache.org/docs/intro)
 
-### 2.2 Gestion du tableau de bord
-Pour gérer le contenu du tableau de bord, vous avez accès à plusieurs options :
-- **Ajout de graphiques** : Cliquez sur "Add Chart" pour intégrer un nouveau graphique basé sur vos données MOS ou OCSGE.
-- **Ajout de widgets** : Cliquez sur "Layout elements" pour intégrer de nouveaux onglets, zones de texte, séparateur, titre.
+[Documentation Superset Github](https://github.com/apache/superset)
 
-> ⚠️ **Attention** : Un graphique ne peut être intégré qu'une seule fois dans un tableau de bord. Toutefois, il peut être utilisé dans plusieurs tableaux de bord différents. Si une modification est apportée au graphique, cette modification sera répercutée dans tous les tableaux de bord où le graphique est présent.
+[Documentation SNUM Superset](https://snum.gitlab-pages.din.developpement-durable.gouv.fr/ds/gd3ia/offre-dataviz-documentation/pdf/guide-offre-dataviz.pdf)
 
 ## 3. Gestion des données (datasets)
 
@@ -68,11 +63,13 @@ En cas de suppression ou d'ajout de données dans la table ou la vue matérialis
 
 ### 3.3 Templating SQL
 Pour générer des URLs dynamiques et personnaliser l'affichage, vous pouvez utiliser du templating SQL dans vos datasets :
+
+[Documentation SQL Templating](https://superset.apache.org/docs/configuration/sql-templating/)
+
 Dans le menu modification d'un dataset, passer le dataset en virtuel "click the lock to make changes / virtual" puis ajouter le code SQL. 
 <p align="center">
     <img src="https://github.com/geobretagne/visufoncier/blob/main/documentation/images/template_sql.png" alt="template_sql" width="500" />
 </p>
-
 
 Voici un exemple de requête SQL :
 
@@ -88,6 +85,8 @@ Ici, l'URL est personnalisée avec le code insee correspondant à la variable in
 ## 4. Gestion des graphiques (charts)
 Chaque graphique a un identifiant unique. Un graphique peut être intégré une seule fois dans un tableau de bord. Cependant, il est possible de dupliquer les graphiques en utilisant le menu "Save As...".
 L'identifiant d'un graphique sera utilisé lors de la personnalisation (par exemple, pour effacer le titre d'un graphique) dans le code CSS.
+
+> ⚠️ **Attention** : Il est possible de changer le titre d'un graphique à partir de la mise en page, mais cela ne se répercute pas dans le réel titre du graphique. Il est donc préférable d'effectuer le changement dans le menu "Charts".
 
 ## 5. Gestion des droits
 Dans l'instance Superset, les droits d’accès peuvent être gérés au niveau des rôles utilisateurs. Pour attribuer ou modifier des droits :
@@ -122,9 +121,11 @@ Par exemple, si la variable "nom_departement" est oubliée dans une vue matéria
 
 ## 7. Personnalisation
 
-Voir les tutoriels de personnalisation sur la page : https://margot-leborgne.gitbook.io/formation-superset-avancee
 ### 7.1 Personnalisation avec le CSS
 L'apparence du tableau de bord (par exemple, ajuster la taille des polices ou les marges des éléments), est personnalisé avec du code CSS.
+
+[Documentation customizing CSS](https://preset.io/blog/customizing-superset-dashboards-with-css/#general-backgrounds-fonts-and-colors)
+
 <p align="center">
     <img src="https://github.com/geobretagne/visufoncier/blob/main/documentation/images/css_editor.png" alt="template_sql" width="500" />
 </p>
@@ -133,6 +134,9 @@ L'apparence du tableau de bord (par exemple, ajuster la taille des polices ou le
 
 ### 7.2 Personnalisation avec le code de métadonnées JSON
 Pour personnaliser des aspects visuels comme les couleurs des graphiques en fonction des libellés :
+
+[Documentation customizing charts](https://preset.io/blog/customizing-chart-colors-with-superset-and-preset/)
+
 - Accédez à "Dashboard properties", advanced pour spécifier des couleurs spécifiques à certains labels (exemple : assigner une couleur spécifique aux flux d’artificialisation et désartificialisation).
 
 <p align="center">
@@ -141,5 +145,46 @@ Pour personnaliser des aspects visuels comme les couleurs des graphiques en fonc
 
 *Le code metadonnées JSON est commenté et disponbile dans la section github - metajson à venir*
 
+## 8. Exporter - Importer le tableau de bord Visufoncier
+
+[Documentation importer exporter un tableau de bord](https://docs.chaossearch.io/docs/exporting-and-importing-within-superset)
+
+L'exportation d'un tableau de bord va creer un fichier .zip contenant le dashboard, les graphiques, les données, la configuration CSS et metadonnées JSON ainsi que le paramétrage à la BDD.
+Il est possible ensuite de l'importer sur une autre instance superset pour dupliquer le tableau de bord.
+
+⚠️ **Attention** : Si un graphique a deja été importé dans l'instance ou va etre importer le tableau de bord, les modifications sur ce dernier ne seront pas appliqués. Si l'id d'un graphique a deja été utilisé dans l'instance d'importation, alors superset va créer un nouvel id pour le graphique, il faudra donc adapter le code CSS si il est personnalisé par id. 
+
+## 9. Intégration (iframe)
+
+[Documentation embed iframe](https://www.restack.io/docs/superset-knowledge-apache-superset-embed-iframe)
+
+#### 9.1 Graphiques embarqués dans Superset
+
+Superset peut être configuré pour autoriser l’utilisation d'iframes (voir la section sur la configuration du fichier `superset_config.py`). Dans notre cas, nous avons autorisé l’utilisation d'iframes provenant de sources comme Géobretagne.
+
+- **Ajout d'une zone de texte avec un lien vers une iframe** : Vous pouvez ajouter une zone de texte dans le tableau de bord, puis coller le lien vers l'iframe souhaitée pour afficher une carte interactive ou tout autre contenu externe.
+  
+- **Utilisation de graphiques "handlebars" pour personnaliser l'URL d'une iframe** : Vous pouvez également utiliser les graphiques "handlebars" pour créer des URLs dynamiques et intégrer des cartes personnalisées. Par exemple, en passant des paramètres dynamiques comme les coordonnées `x`, `y`, et le zoom `z` dans l'URL de l'iframe :
+
+```handlebars
+{{#each data}}
+  <iframe 
+    src="https://geobretagne.fr/mviewer/?x={{x}}&y={{y}}&z={{z}}&l=commune_metro*%2Cmos_consommation*mos_simple_2021%2Cmos_grille_conso*&lb=plan&config=/apps/mos/config.xml&mode=u" 
+    width="100%" 
+    height="800px" 
+    style="border: 2px solid #ccc;" 
+    allowfullscreen>
+  </iframe>
+{{/each}}
+
+```
+Ce type d’intégration vous permet d'afficher une carte dynamique dans votre tableau de bord Superset, tout en personnalisant l'URL selon les besoins de l’utilisateur.
+
+#### 9.2 Superset embarqué dans un autre outil
+
+Grâce au templating SQL vu au point [3.3](#33-templating-sql) ainsi qu'au paramétrage dans le fichier `superset_config.py` (voir la section sur la configuration du fichier [superset_config.py](#superset_configpy)), il est possible d'intégrer des graphiques Superset dans d'autres outils ou plateformes via des iframes ou des URLs dynamiques.
+
+Cette intégration permet de bénéficier des visualisations interactives et filtrées de Superset directement dans d'autres environnements sans duplication des données.
+Les graphiques peuvent ainsi être utilisés de manière flexible pour enrichir d'autres outils tout en gardant la puissance analytique de Superset.
+
 ---
-Ajouter la partie embedded, mettre des liens vers la doc officielle, ajouter une partie sur l'export-import 
