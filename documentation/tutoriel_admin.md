@@ -93,6 +93,8 @@ Dans l'instance Superset, les droits d’accès peuvent être gérés au niveau 
 - Allez dans "Settings" > "List Roles".
 - Il est nécessaire de déclarer les datasets associés au tableau de bord dans le rôle public afin de publier la donnée avec "datasource access on" ou "schema access on". 
 
+> ⚠️ **Attention** : un tableau de bord en « brouillon » n’est pas diffusé même si ces données sont publiques. Il faut le passer en "publier" directement sur la page du tdb.
+
 ## 6. Gestion des filtres
 
 ### 6.1 Modification des filtres
