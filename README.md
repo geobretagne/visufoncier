@@ -40,7 +40,7 @@ Si vous souhaitez installer et configurer Visufoncier localement, suivez les ét
 
 ### Prérequis
 - PostgreSQL
-- Apache Superset
+- Apache Superset 4.0.2 ou supérieure
 - GeoServer (pour la publication des données géographiques)
 - Python 3.x
 
