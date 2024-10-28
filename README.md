@@ -42,6 +42,7 @@ Si vous souhaitez installer et configurer Visufoncier localement, suivez les ét
 - PostgreSQL
 - Apache Superset 4.0.2 ou supérieure
 - QGIS 3.34 ou supérieure pour l'analyse MOSxPLU
+- GDAL
 - GeoServer (pour la publication des données géographiques)
 - Python 3.x
 
