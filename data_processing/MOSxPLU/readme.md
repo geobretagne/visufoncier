@@ -51,9 +51,11 @@
 - Dans la partie Traitement de QGIS, allez dans `Modèle` et chargez le modèle `mos_gpu_2`.
 - Renseignez les champs à remplir avec les couches de données appropriées.
 - Laissez vides les couches temporaires de résultat.
+- Voici un aperçu avant lancement avec les données renseignées :
+![Lancement Modèle](https://github.com/geobretagne/visufoncier/blob/main/documentation/images/lancement_model_qgis.png)
 
 ## 12. Lancement du Traitement
-- Après avoir rempli les champs nécessaires, lancez le traitement.
+- Après avoir rempli les champs nécessaires, lancez le traitement en cliquant sur "éxécuter".
 - **Temps approximatif : 48 minutes.**
 
 ## 13. Suivi du Traitement
