@@ -1,6 +1,0 @@
-pandas
-xlrd
-openpyxl
-sqlalchemy
-psycopg2
-python-dotenv
