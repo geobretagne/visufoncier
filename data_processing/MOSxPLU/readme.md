@@ -42,8 +42,8 @@
 - Sélectionnez l'onglet `Traitement`.
 - Cochez l'option `Ignorer les entités non valides` pour s'assurer que les géométries non valides ne sont pas prises en compte dans les traitements.
   
-## 10. Téléchargement du Modèle `mos_gpu_2`
-- Télécharger le modèle `mos_gpu_2` dans ce dossier.
+## 10. Téléchargement du Modèle `mos_gpu`
+- Télécharger le modèle `mos_gpu` dans ce dossier.
 - Voici un aperçu de la construction du modèle : 
  ![Modèle QGIS](https://github.com/geobretagne/visufoncier/blob/main/documentation/images/model_qgis.png)
 
@@ -56,7 +56,7 @@
 
 ## 12. Lancement du Traitement
 - Après avoir rempli les champs nécessaires, lancez le traitement en cliquant sur "éxécuter".
-- **Temps approximatif : 48 minutes.**
+- **Temps approximatif : 1h30**
 
 ## 13. Suivi du Traitement
 - Surveillez la progression du traitement.
