@@ -1,5 +1,7 @@
 # Procédure pour le Traitement des Données GPU sur QGIS
 
+L'exemple est donné sur les données du MOS intersecté avec les données du GPU, mais le modèle peut etre adapté pour les données de l'OCS GE.
+
 ## 1. Lancer la vue matérialisée 
 - `visufoncier.mos_foncier_agrege_enaf_view` via la syntaxe `4_MOSxPLU.sql`
 
@@ -28,7 +30,7 @@
 
 ## 7. Connexion à la Base de Données PostgreSQL
 - Dans QGIS, allez dans le menu `DB Manager` (Gestionnaire de base de données).
-- Connectez-vous à la base de données PostgreSQL `geobretagne` :
+- Connectez-vous à la base de données PostgreSQL :
   - Cliquez sur `Add PostGIS Layer` (Ajouter une couche PostGIS).
   - Remplissez les informations nécessaires (hôte, base de données, utilisateur, mot de passe) et testez la connexion.
 
@@ -44,6 +46,7 @@
   
 ## 10. Téléchargement du Modèle `mos_gpu`
 - Télécharger le modèle `mos_gpu` dans ce dossier.
+- Sous QGIS/ Dans Traitement, modeleur : Charger le modèle téléchargé. Adapter le nom de votre BDD dans le modèle dans les algorithmes d'exportation (en rouge). Adapter le nom des tables si vous le souhaitez. Attention, l'algorythme d'exportation du résultat vers la BDD écrase la table si elle existe déja. 
 - Voici un aperçu de la construction du modèle : 
  ![Modèle QGIS](https://github.com/geobretagne/visufoncier/blob/main/documentation/images/model_qgis.png)
 
