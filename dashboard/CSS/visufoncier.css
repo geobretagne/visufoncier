@@ -1,0 +1,81 @@
+/* === Apparence générale du dashboard === */
+
+/* Changer l'apparence des onglets */
+.ant-tabs-tab {
+    color: black; /* Texte des onglets non sélectionnés */
+}
+
+.ant-tabs-tab.ant-tabs-tab-active {
+    color: #0000FF !important; /* Texte des onglets sélectionnés */
+}
+
+/* Changer l'apparence du header */
+body .dashboard-component.header-style-option.header-small {
+    color: red; /* Couleur du texte pour les petits headers */
+}
+
+body .dashboard-component.header-style-option.header-medium {
+    color: #3b50b2; /* Couleur du texte pour les headers de taille moyenne */
+}
+
+/* Changer le fond de la barre de filtre */
+div[data-test=filter-bar] > div {
+    background: #ececfe;
+    font-size: 12px;
+}
+
+/* Ajuster la taille de la police pour tous les éléments Markdown, sauf la barre de filtre */
+p:not(div[data-test=filter-bar]) {
+    font-size: 13.5px;
+}
+
+/* Changer l'apparence des visualisations de type "Gros Nombre" */
+div[data-test-viz-type=big_number_total] {
+    background: #ececfe;
+    border-radius: 30px;
+    padding: 15px;
+    width: 100%; /* S'assurer que ça s'adapte à l'écran */
+    height: auto; /* Utiliser auto pour une hauteur dynamique */
+}
+
+div[data-test-viz-type=big_number_total] > div > h1,
+div[data-test-viz-type=big_number_total] > div > h2,
+div[data-test-viz-type=big_number_total] > div > h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #a6b1e1;
+}
+
+/* Mise en forme des tableaux */
+th, td {
+    padding: 7px;
+}
+
+th {
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 250px;
+}
+
+td, th {
+    text-align: center !important;
+}
+
+/* === Personnalisation des graphiques === */
+
+/* Cacher les titres des graphiques */
+[data-test-chart-id] > div:first-child {
+    display: none;
+}
+
+/* Personnalisation des titres principaux des graphiques */
+.dashboard-chart-id {
+    font-size: 1.5em; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    color: #a6b1e1; /* Couleur gris foncé */
+}
+
+/* Personnalisation des titres des graphiques de type handlebars */
+.dashboard-chart-id {
+    font-size: 1.15em;
+}
