@@ -23,7 +23,7 @@ Le tableau de bord permet d'analyser l'évolution du Mode d'Occupation du Sol (M
 Sélectionnez la période souhaitée depuis le filtre temporel situé en haut du tableau de bord, puis cliquez sur **Apply Filter**. Tous les graphiques et indicateurs se mettent à jour en fonction de la période sélectionnée.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/filtre_temporel.png" alt="Filtre temporel" width="200"/>
+  <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/tempo.png" alt="Filtre temporel" width="200"/>
 </p>
 <p align="center"><em>Sélection de la période d'analyse du MOS.</em></p>
 
@@ -55,7 +55,7 @@ Sélectionnez le niveau d'analyse souhaité :
   </ul>
   </p>
   <p align="center">
-    <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/selection_territoire.png" alt="Sélection de territoire" width="200" />
+    <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/territoire.png" alt="Sélection de territoire" width="200" />
   </p>
   <p align="center"><em>Exemple de sélection de territoire.</em></p>
 </div>
@@ -94,7 +94,10 @@ Cette fonctionnalité est disponible dans **tous les onglets** du tableau de bor
 
 > ⚠️ **Attention :** Les cross-filtres agissent uniquement sur les graphiques et tableaux. Ils **ne modifient pas** le territoire affiché en haut du tableau de bord, ni les cartographies. Pour filtrer sur un territoire précis ou changer de commune, utilisez les filtres géographiques en haut de page (voir étape 5).
 
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/cross_filter.png" alt="Cross-filtre" width="600"/>
+</p>
+<p align="center"><em>Exemple de cross-filtre : clic sur une catégorie pour filtrer tous les graphiques de l'onglet.</em></p>
 
 ---
 
@@ -155,7 +158,10 @@ Parcourez les cartographies dans différents onglets :
 Les cartographies concernant les données de l'OCS GE NG sont en développement.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/map.png" alt="Explorer les données carto" width="600"/>
+  <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/map_2.png" alt="Explorer les données carto" width="600"/>
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/map_3.png" alt="Explorer les données carto" width="600"/>
 </p>
 <p align="center"><em>Cartographies dans l'onglet "Cartes".</em></p>
 
