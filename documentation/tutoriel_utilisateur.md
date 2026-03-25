@@ -147,4 +147,4 @@ Les cartographies concernant les données de l'OCS GE NG sont en développement.
 </p>
 <p align="center"><em>Cartographies dans l'onglet "Cartes".</em></p>
 
-Accédez aux outils complets de visualisations via GeoBretagne : [GeoBretagne MViewer](https://geobretagne.fr/mviewer/?config=/apps/mos/config.xml)
+
