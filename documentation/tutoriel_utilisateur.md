@@ -10,7 +10,26 @@ Cliquez sur ce lien pour accéder à l'outil Visufoncier : [Visufoncier](https:/
 
 ---
 
-## Étape 2 : Choisir l'échelle d'analyse
+## Étape 2 : Choisir la période d'analyse du MOS
+
+Le tableau de bord permet d'analyser l'évolution du Mode d'Occupation du Sol (MOS) sur **trois périodes** :
+
+| Période | Description |
+|---|---|
+| **2011 – 2021** | Analyse sur la période historique de référence |
+| **2021 – 2024** | Analyse sur la période récente |
+| **2011 – 2024** | Analyse sur l'ensemble de la période disponible |
+
+Sélectionnez la période souhaitée depuis le filtre temporel situé en haut du tableau de bord, puis cliquez sur **Apply Filter**. Tous les graphiques et indicateurs se mettent à jour en fonction de la période sélectionnée.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/filtre_temporel.png" alt="Filtre temporel" width="200"/>
+</p>
+<p align="center"><em>Sélection de la période d'analyse du MOS.</em></p>
+
+---
+
+## Étape 3 : Choisir l'échelle d'analyse
 Sélectionnez le niveau d'analyse souhaité :
 - Régional
 - Départemental
@@ -25,7 +44,7 @@ Sélectionnez le niveau d'analyse souhaité :
 
 ---
 
-## Étape 3 : Sélectionner votre territoire
+## Étape 4 : Sélectionner votre territoire
 
 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
   <p style="flex: 1;">Choisissez votre territoire (département, région, commune, EPCI ou SCOT). Vous pouvez sélectionner plusieurs territoires à la fois.
@@ -43,9 +62,8 @@ Sélectionnez le niveau d'analyse souhaité :
 
 ---
 
-## Étape 4 : Appliquer les filtres
+## Étape 5 : Appliquer les filtres géographiques
 
-### Filtres géographiques
 Cliquez sur le bouton **Apply Filter** pour appliquer vos sélections géographiques.
 
 <p align="center">
@@ -62,28 +80,9 @@ Par exemple, vous pouvez :
 </p>
 <p align="center"><em>Application de filtres multiples.</em></p>
 
-### Filtres temporels — Choix de la période d'analyse
-
-Le tableau de bord permet d'analyser l'évolution du foncier sur **trois périodes** :
-
-| Période | Description |
-|---|---|
-| **2011 – 2021** | Analyse sur la période historique de référence |
-| **2021 – 2024** | Analyse sur la période récente |
-| **2011 – 2024** | Analyse sur l'ensemble de la période disponible |
-
-Sélectionnez la période souhaitée depuis le filtre temporel situé en haut du tableau de bord, au même endroit que les filtres géographiques, puis cliquez sur **Apply Filter**.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/filtre_temporel.png" alt="Filtre temporel" width="200"/>
-</p>
-<p align="center"><em>Sélection de la période d'analyse.</em></p>
-
-> **Remarque :** Tous les graphiques et indicateurs du tableau de bord se mettent à jour en fonction de la période sélectionnée.
-
 ---
 
-## Étape 5 : Explorer les données
+## Étape 6 : Explorer les données
 
 ### Cross-filtres : filtrer dynamiquement depuis les graphiques
 
@@ -93,7 +92,7 @@ En plus des filtres géographiques et temporels, il est possible de **filtrer le
 
 Cette fonctionnalité est disponible dans **tous les onglets** du tableau de bord.
 
-> ⚠️ **Attention :** Les cross-filtres agissent uniquement sur les graphiques et tableaux. Ils **ne modifient pas** le territoire affiché en haut du tableau de bord, ni les cartographies. Pour filtrer sur un territoire précis ou changer de commune, utilisez les filtres géographiques en haut de page (voir étape 4).
+> ⚠️ **Attention :** Les cross-filtres agissent uniquement sur les graphiques et tableaux. Ils **ne modifient pas** le territoire affiché en haut du tableau de bord, ni les cartographies. Pour filtrer sur un territoire précis ou changer de commune, utilisez les filtres géographiques en haut de page (voir étape 5).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/cross_filter.png" alt="Cross-filtre" width="600"/>
