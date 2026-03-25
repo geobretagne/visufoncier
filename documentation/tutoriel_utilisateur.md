@@ -94,10 +94,7 @@ Cette fonctionnalité est disponible dans **tous les onglets** du tableau de bor
 
 > ⚠️ **Attention :** Les cross-filtres agissent uniquement sur les graphiques et tableaux. Ils **ne modifient pas** le territoire affiché en haut du tableau de bord, ni les cartographies. Pour filtrer sur un territoire précis ou changer de commune, utilisez les filtres géographiques en haut de page (voir étape 5).
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/cross_filter.png" alt="Cross-filtre" width="600"/>
-</p>
-<p align="center"><em>Exemple de cross-filtre : clic sur une catégorie pour filtrer tous les graphiques de l'onglet.</em></p>
+
 
 ---
 
