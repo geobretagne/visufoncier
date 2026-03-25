@@ -66,20 +66,6 @@ Sélectionnez le niveau d'analyse souhaité :
 
 Cliquez sur le bouton **Apply Filter** pour appliquer vos sélections géographiques.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/apply_filter.png" alt="Appliquer les filtres" width="200"/>
-</p>
-<p align="center"><em>Exemple d'application des filtres.</em></p>
-
-Par exemple, vous pouvez :
-- Sélectionner un département, comme le Finistère.
-- Revenir au niveau territorial et choisir **Commune** pour afficher uniquement les communes du Finistère dans la liste.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/geobretagne/visufoncier/main/documentation/images/double_filtre.png" alt="Appliquer les filtres double" width="200"/>
-</p>
-<p align="center"><em>Application de filtres multiples.</em></p>
-
 ---
 
 ## Étape 6 : Explorer les données
