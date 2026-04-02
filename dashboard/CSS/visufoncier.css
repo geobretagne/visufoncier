@@ -1,81 +1,274 @@
+/* === DESIGN SYSTEM DE L'ÉTAT FRANÇAIS (DSFR) === */
+
+/* Import de la police Marianne */
+@import url('https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.11/dist/fonts/Marianne-fonts.css');
+
+/* Variables couleurs DSFR */
+:root {
+    --blue-france: #000091;
+    --blue-france-sun: #6A6AF4;
+    --grey-975: #161616;
+    --grey-950: #242424;
+    --grey-200: #E5E5E5;
+    --grey-100: #F6F6F6;
+}
+
+/* === POLICE MARIANNE === */
+body {
+    font-family: "Marianne", "Arial", sans-serif !important;
+}
+
+input,
+select,
+textarea,
+.ant-select-selector {
+    font-family: "Marianne", "Arial", sans-serif !important;
+}
+
 /* === Apparence générale du dashboard === */
 
-/* Changer l'apparence des onglets */
+/* Onglets - style DSFR */
 .ant-tabs-tab {
-    color: black; /* Texte des onglets non sélectionnés */
+    color: var(--grey-975);
+    font-weight: 500;
 }
 
 .ant-tabs-tab.ant-tabs-tab-active {
-    color: #0000FF !important; /* Texte des onglets sélectionnés */
+    color: var(--blue-france) !important;
+    font-weight: 700;
 }
 
-/* Changer l'apparence du header */
+/* Headers */
 body .dashboard-component.header-style-option.header-small {
-    color: red; /* Couleur du texte pour les petits headers */
+    color: var(--grey-950);
+    font-weight: 700;
 }
 
 body .dashboard-component.header-style-option.header-medium {
-    color: #3b50b2; /* Couleur du texte pour les headers de taille moyenne */
+    color: var(--blue-france);
+    font-weight: 700;
 }
 
-/* Changer le fond de la barre de filtre */
+/* Barre de filtre - style DSFR */
 div[data-test=filter-bar] > div {
-    background: #ececfe;
-    font-size: 12px;
+    background: var(--grey-100);
+    font-size: 14px;
+    border-right: 1px solid var(--grey-200);
 }
 
-/* Ajuster la taille de la police pour tous les éléments Markdown, sauf la barre de filtre */
+/* Police générale */
 p:not(div[data-test=filter-bar]) {
-    font-size: 13.5px;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-/* Changer l'apparence des visualisations de type "Gros Nombre" */
+/* Big Numbers - style DSFR (SANS couleur) */
 div[data-test-viz-type=big_number_total] {
-    background: #ececfe;
-    border-radius: 30px;
-    padding: 15px;
-    width: 100%; /* S'assurer que ça s'adapte à l'écran */
-    height: auto; /* Utiliser auto pour une hauteur dynamique */
+    background: var(--grey-100);
+    border-radius: 0;
+    border: 1px solid var(--grey-200);
+    padding: 24px;
+    width: 100%;
+    height: auto;
 }
 
 div[data-test-viz-type=big_number_total] > div > h1,
 div[data-test-viz-type=big_number_total] > div > h2,
 div[data-test-viz-type=big_number_total] > div > h3 {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #a6b1e1;
+    font-size: 2em;
+    font-weight: 700;
+    /* Pas de color définie - garde les couleurs du JSON */
 }
 
-/* Mise en forme des tableaux */
+/* Tableaux */
 th, td {
-    padding: 7px;
+    padding: 12px;
 }
 
 th {
     white-space: normal;
     word-wrap: break-word;
     max-width: 250px;
+    background: var(--grey-100);
+    font-weight: 700;
 }
 
 td, th {
     text-align: center !important;
+    border: 1px solid var(--grey-200);
 }
 
-/* === Personnalisation des graphiques === */
+/* === Cacher les titres des graphiques === */
 
-/* Cacher les titres des graphiques */
-[data-test-chart-id] > div:first-child {
+[data-test-chart-name="Filtre territoire 2026"] > div:first-child,
+[data-test-chart-name="Filtre temporel mos 2026"] > div:first-child,
+[data-test-chart-name="Filtre temporel mos 2026 2"] > div:first-child,
+[data-test-chart-name="Filtre temporel ocsge"] > div:first-child,
+[data-test-chart-name="Filtre temporel ocsge2"] > div:first-child,
+
+[data-test-chart-id="369"] > div:first-child,
+[data-test-chart-id="378"] > div:first-child,
+[data-test-chart-id="334"] > div:first-child,
+[data-test-chart-id="312"] > div:first-child,
+[data-test-chart-id="333"] > div:first-child,
+[data-test-chart-id="350"] > div:first-child,
+[data-test-chart-id="379"] > div:first-child,
+[data-test-chart-id="372"] > div:first-child,
+[data-test-chart-id="375"] > div:first-child,
+[data-test-chart-id="281"] > div:first-child,
+[data-test-chart-id="293"] > div:first-child,
+[data-test-chart-id="344"] > div:first-child,
+[data-test-chart-id="311"] > div:first-child,
+[data-test-chart-id="314"] > div:first-child,
+[data-test-chart-id="315"] > div:first-child,
+[data-test-chart-id="364"] > div:first-child,
+[data-test-chart-id="363"] > div:first-child,
+[data-test-chart-id="362"] > div:first-child,
+[data-test-chart-id="302"] > div:first-child,
+[data-test-chart-id="313"] > div:first-child,
+[data-test-chart-id="376"] > div:first-child,
+[data-test-chart-id="374"] > div:first-child,
+[data-test-chart-id="328"] > div:first-child,
+[data-test-chart-id="361"] > div:first-child,
+[data-test-chart-id="377"] > div:first-child,
+[data-test-chart-id="367"] > div:first-child,
+[data-test-chart-id="368"] > div:first-child,
+[data-test-chart-id="354"] > div:first-child,
+[data-test-chart-id="340"] > div:first-child,
+[data-test-chart-id="298"] > div:first-child,
+[data-test-chart-id="356"] > div:first-child,
+[data-test-chart-id="373"] > div:first-child,
+[data-test-chart-id="336"] > div:first-child,
+[data-test-chart-id="357"] > div:first-child,
+[data-test-chart-id="308"] > div:first-child,
+[data-test-chart-id="358"] > div:first-child,
+[data-test-chart-id="345"] > div:first-child,
+[data-test-chart-id="288"] > div:first-child,
+[data-test-chart-id="180"] > div:first-child {
     display: none;
 }
 
-/* Personnalisation des titres principaux des graphiques */
-.dashboard-chart-id {
-    font-size: 1.5em; /* Taille du texte */
-    font-weight: bold; /* Texte en gras */
-    color: #a6b1e1; /* Couleur gris foncé */
+/* Titres principaux (SANS couleur) */
+[data-test-chart-id="285"] > div:first-child,
+[data-test-chart-id="347"] > div:first-child,
+[data-test-chart-id="348"] > div:first-child,
+[data-test-chart-id="359"] > div:first-child,
+    display: none;
 }
 
-/* Personnalisation des titres des graphiques de type handlebars */
-.dashboard-chart-id {
+.dashboard-chart-id-285,
+.dashboard-chart-id-347,
+.dashboard-chart-id-348,
+.dashboard-chart-id-359,
+.dashboard-chart-id-299 {
+    font-size: 1.75em;
+    font-weight: 700;
+    /* Pas de color - garde les couleurs du JSON */
+}
+
+/* Handlebars */
+.dashboard-chart-id-369,
+.dashboard-chart-id-378,
+.dashboard-chart-id-334,
+.dashboard-chart-id-379,
+.dashboard-chart-id-372,
+.dashboard-chart-id-375,
+.dashboard-chart-id-311,
+.dashboard-chart-id-315,
+.dashboard-chart-id-313,
+.dashboard-chart-id-376,
+.dashboard-chart-id-374,
+.dashboard-chart-id-377,
+.dashboard-chart-id-354,
+.dashboard-chart-id-336,
+.dashboard-chart-id-358 {
     font-size: 1.15em;
+    font-weight: 500;
+}
+
+/* === FILTRES - Style DSFR === */
+
+/* Filtres temporels mis en avant */
+div[aria-label="Période d'analyse selectionnée : "] .ant-select-selector,
+div[aria-label="à :"] .ant-select-selector {
+    border: 2px solid var(--blue-france) !important;
+    background-color: #E3E3FD !important;
+    font-weight: 700 !important;
+    border-radius: 0 !important;
+}
+
+/* Type de territoire */
+div[aria-label="Type de territoire"] .ant-select-selector {
+    border: 2px solid var(--blue-france) !important;
+    background-color: #E3E3FD !important;
+    font-weight: 700 !important;
+    border-radius: 0 !important;
+}
+
+/* === LOGOS HEADER === */
+
+/* Logo gauche (Préfet) */
+.header-large .editable-title::before {
+    content: "";
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background-image: url('https://geobretagne.fr/pub/logo/prefet_bretagne.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 24px;
+    vertical-align: middle;
+}
+
+/* Logo droit (VisuFoncier) */
+.header-large .editable-title::after {
+    content: "";
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background-image: url('https://geobretagne.fr/pub/logo/app-visufoncier.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 24px;
+    vertical-align: middle;
+}
+
+/* === HANDLEBARS CONTEXTE - Style DSFR === */
+
+/* Sticky row */
+.grid-row.background--transparent:has([data-test-chart-name="Filtre territoire 2026"]) {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+    background: white !important;
+    padding: 12px 0 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+/* Style des encadrés handlebars - DSFR */
+[data-test-chart-name="Filtre territoire 2026"],
+[data-test-chart-name="Filtre temporel mos 2026"] {
+    background: var(--grey-100) !important;
+    border-left: 4px solid var(--blue-france) !important;
+    border-radius: 0 !important;
+    padding: 16px 24px !important;
+    margin: 8px 0 !important;
+    box-shadow: none !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: var(--grey-975) !important;
+}
+
+/* Style des encadrés handlebars - DSFR */
+[data-test-chart-name="Filtre territoire 2026 2"],
+[data-test-chart-name="Filtre temporel mos 2026 2"] {
+    background: var(--grey-100) !important;
+    border-left: 4px solid var(--blue-france) !important;
+    border-radius: 0 !important;
+    padding: 16px 24px !important;
+    margin: 8px 0 !important;
+    box-shadow: none !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: var(--grey-975) !important;
 }
