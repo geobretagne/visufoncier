@@ -325,11 +325,27 @@ SET nom_epci = e.nom_epci
 FROM ign.express_epci e
 WHERE t.siren_epci = e.code_epci;
 
--- Jointure SCOT
+-- Jointure SCOT -- plus le bon fichier -- j'ai pris IGN.table_correspondance car les scot ont été modifié debut 2026.
 UPDATE visufoncier.v2_mos_agrege t
 SET nom_scot = ff.scot
 FROM visufoncier.ff_obs_artif_conso_com_2009_2024 ff
 WHERE t.insee_com = ff.idcom;
+
+--correction faite apres visufoncier 
+UPDATE visufoncier.v2_mos_agrege
+SET nom_scot = tc.nom_scot
+FROM ign.table_correspondance tc
+WHERE visufoncier.v2_mos_agrege.insee_com = tc.code_insee;
+
+UPDATE visufoncier.v2_mos_agrege_com
+SET nom_scot = tc.nom_scot
+FROM ign.table_correspondance tc
+WHERE visufoncier.v2_mos_agrege_com.insee_com = tc.code_insee;
+
+UPDATE visufoncier.v2_mos_agrege_geom
+SET nom_scot = tc.nom_scot
+FROM ign.table_correspondance tc
+WHERE visufoncier.v2_mos_agrege_geom.insee_com = tc.code_insee;
 
 -- Vérification
 SELECT insee_com, nom_commune, nom_epci, nom_scot, nom_departement, COUNT(*)
